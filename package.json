@@ -1,0 +1,22 @@
+{
+  "name": "figma-to-code-agent",
+  "version": "0.1.0",
+  "description": "Multi-agent system for generating high-fidelity code from Figma designs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "figma",
+    "code-generation",
+    "ai-agents",
+    "langchain"
+  ],
+  "author": "Geoff Allman",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.40.0",
+    "pixelmatch": "^5.3.0",
+    "pngjs": "^7.0.0"
+  }
+}
