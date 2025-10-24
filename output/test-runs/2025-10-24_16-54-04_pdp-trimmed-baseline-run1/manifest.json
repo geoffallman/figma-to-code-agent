@@ -1,0 +1,16 @@
+{
+  "run_id": "2025-10-24_16-54-04_pdp-trimmed-baseline-run1",
+  "test_name": "pdp-trimmed-baseline-run1",
+  "timestamp": "2025-10-24_16-54-04",
+  "created_at": "2025-10-24T16:54:04.714450",
+  "directories": {
+    "base": "output/test-runs/2025-10-24_16-54-04_pdp-trimmed-baseline-run1",
+    "code": "output/test-runs/2025-10-24_16-54-04_pdp-trimmed-baseline-run1/code",
+    "screenshots": "output/test-runs/2025-10-24_16-54-04_pdp-trimmed-baseline-run1/screenshots",
+    "diffs": "output/test-runs/2025-10-24_16-54-04_pdp-trimmed-baseline-run1/diffs",
+    "evaluations": "output/test-runs/2025-10-24_16-54-04_pdp-trimmed-baseline-run1/evaluations",
+    "images": "output/test-runs/2025-10-24_16-54-04_pdp-trimmed-baseline-run1/images",
+    "metadata": "output/test-runs/2025-10-24_16-54-04_pdp-trimmed-baseline-run1/metadata"
+  },
+  "status": "initialized"
+}

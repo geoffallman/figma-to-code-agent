@@ -62,54 +62,77 @@ def evaluate_visual_fidelity(figma_screenshot_path: str, rendered_screenshot_pat
     rendered_b64 = encode_image_to_base64(rendered_screenshot_path)
 
     # Construct evaluation prompt
-    evaluation_prompt = """You are evaluating visual fidelity between a Figma design and rendered HTML output.
+    evaluation_prompt = """You are evaluating PIXEL-PERFECT visual fidelity between a Figma design and rendered HTML output.
+
+IMPORTANT: The images may look very similar or even identical at first glance. That's expected for high-fidelity implementations. Your job is to find ANY subtle differences, no matter how small.
 
 Compare these two screenshots:
-1. IMAGE 1: Original Figma design (ground truth)
-2. IMAGE 2: Rendered HTML output (candidate)
+1. IMAGE 1 (FIRST IMAGE): Original Figma design (ground truth)
+2. IMAGE 2 (SECOND IMAGE): Rendered HTML output (candidate)
 
-Evaluate visual fidelity across these dimensions:
-- **Layout & Spacing**: Margins, padding, gaps, alignment, component positioning
-- **Typography**: Font family, size, weight, line-height, letter-spacing, text case
-- **Colors**: Exact color matches (background, text, borders)
-- **Visual Elements**: Icons, borders, dividers, shadows, backgrounds
-- **Component Sizing**: Width, height, aspect ratios
+CRITICAL INSTRUCTIONS:
+- ALWAYS return a JSON evaluation, even if the images appear identical
+- If images look identical, score 100 and note "No visible differences detected"
+- Your score must reflect PIXEL-LEVEL accuracy, not just semantic similarity
+- If elements are present but sized/positioned/styled incorrectly, this is a MAJOR issue
+- Score harshly for any visual differences - we need pixel-perfect reproduction
+- Do NOT give high scores just because "all elements are present"
+- Spacing differences of even 5-10px should significantly impact the score
+- Different image sizes, aspect ratios, or proportions are HIGH priority issues
+
+Evaluate visual fidelity across these dimensions with PRECISE measurements:
+- **Layout & Spacing**: Exact margins, padding, gaps, alignment - measure in pixels
+- **Typography**: Exact font family, size, weight, line-height, letter-spacing
+- **Colors**: Exact hex color matches (background, text, borders) - no approximations
+- **Visual Elements**: Exact icon sizes, border widths, shadow values, background sizes
+- **Component Sizing**: Exact width, height, aspect ratios - measure in pixels
+- **Image Fidelity**: Image dimensions, aspect ratios, positioning, scaling
+
+SCORING GUIDELINES:
+- 95-100: Nearly pixel-perfect, only imperceptible differences
+- 85-94: Very close, minor spacing/sizing differences (5-15px off)
+- 70-84: Noticeable differences in layout, spacing, or sizing (15-30px off)
+- 50-69: Significant layout differences, wrong proportions, major spacing issues
+- Below 50: Major structural differences, wrong aspect ratios, missing functionality
 
 For each discrepancy you find:
-1. Identify the specific issue with precise measurements
-2. Categorize it (spacing/typography/colors/layout/elements)
-3. Provide exact code fix suggestion
-4. Assign priority (high/medium/low)
+1. Identify the specific issue with EXACT measurements in pixels
+2. Categorize it (spacing/typography/colors/layout/elements/sizing)
+3. Provide exact code fix suggestion with specific values
+4. Assign priority based on visual impact:
+   - high: Differences > 20px, wrong aspect ratios, major layout shifts
+   - medium: Differences 10-20px, noticeable but not structural
+   - low: Differences < 10px, subtle color variations
 
 Return your evaluation in this JSON format:
 ```json
 {
   "semantic_score": 75.0,
-  "overall_assessment": "Brief summary of how well the rendered output matches the design",
+  "overall_assessment": "Brief summary focusing on MAGNITUDE of visual differences, not just presence of elements",
   "feedback": [
     {
       "category": "spacing",
       "issue": "Gap between menu sections is 24px, should be 18px",
-      "measurement": "6px difference",
+      "measurement": "6px difference (33% larger than design)",
       "fix": "Change gap-6 to gap-[18px] on the nav element",
       "priority": "high"
     },
     {
-      "category": "typography",
-      "issue": "Font weight appears too bold",
-      "measurement": "Using font-normal (400) instead of font-light (300)",
-      "fix": "Change font-normal to font-light (300)",
-      "priority": "medium"
+      "category": "sizing",
+      "issue": "Product images are equal width (33% each), should be variable widths (40%, 30%, 30%)",
+      "measurement": "Image 1: 200px wide, should be 280px (28% smaller)",
+      "fix": "Use grid-cols-[40%_30%_30%] instead of grid-cols-3",
+      "priority": "high"
     }
   ],
   "strengths": [
-    "All content is present and in correct order",
-    "Overall structure matches the design"
+    "Typography is pixel-perfect match",
+    "Color palette exactly matches design"
   ]
 }
 ```
 
-Be specific and actionable. Provide measurements where possible. Focus on visual differences that impact fidelity."""
+Be ruthlessly accurate. Measure everything. Focus on PIXEL-LEVEL differences, not semantic equivalence."""
 
     if code:
         evaluation_prompt += f"\n\nFor context, here is the current HTML/CSS code:\n```html\n{code[:2000]}...\n```"

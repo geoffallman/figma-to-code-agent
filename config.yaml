@@ -9,6 +9,13 @@ models:
     max_tokens: 4096
     temperature: 0.0  # Deterministic for consistent evaluations
 
+  # Code generation (baseline/initial code from Figma)
+  code_generation:
+    provider: anthropic
+    model: claude-sonnet-4-20250514  # Best quality for vision-to-code
+    max_tokens: 8192
+    temperature: 0.2  # Slight creativity for better code structure
+
   # Code improvement (runs less frequently, needs high quality)
   improvement:
     provider: anthropic

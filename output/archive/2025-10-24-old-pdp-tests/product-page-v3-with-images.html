@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brushed Cashmere Cardigan - Product Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        .star-filled {
+            color: #000;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Breadcrumb Navigation -->
+    <nav class="px-6 py-4 text-sm">
+        <div class="flex items-center gap-2 text-gray-700">
+            <a href="#" class="hover:underline">HOME</a>
+            <span>/</span>
+            <a href="#" class="hover:underline">WOMEN</a>
+            <span>/</span>
+            <a href="#" class="hover:underline">SWEATERS</a>
+            <span>/</span>
+            <span>CASHMERE</span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-6 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+            <!-- Left Column: Product Images -->
+            <div class="flex gap-4">
+                <!-- Image Gallery -->
+                <div class="flex-1 grid grid-cols-3 gap-2">
+                    <!-- Image 1 - Close up -->
+                    <div class="col-span-1 aspect-[3/4] rounded overflow-hidden">
+                        <img src="../images/product-page-v3-image-1-120-13154.png"
+                             alt="Product close-up"
+                             class="w-full h-full object-cover" />
+                    </div>
+
+                    <!-- Image 2 - Full body -->
+                    <div class="col-span-1 aspect-[3/4] rounded overflow-hidden">
+                        <img src="../images/product-page-v3-image-2-120-13155.png"
+                             alt="Full product view"
+                             class="w-full h-full object-cover" />
+                    </div>
+
+                    <!-- Image 3 - Detail -->
+                    <div class="col-span-1 aspect-[3/4] rounded overflow-hidden relative">
+                        <img src="../images/product-page-v3-image-3-120-13156.png"
+                             alt="Product detail"
+                             class="w-full h-full object-cover" />
+                        <div class="absolute bottom-4 right-4">
+                            <button class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Product Info -->
+            <div class="space-y-6">
+                <!-- Color Swatches -->
+                <div>
+                    <p class="text-sm mb-3">Crimson Rouge</p>
+                    <div class="flex items-start gap-3 mb-2">
+                        <button class="w-8 h-8 rounded-full border-2 border-gray-300 bg-pink-100"></button>
+                        <button class="w-8 h-8 rounded-full border-2 border-black bg-pink-600"></button>
+                        <button class="w-8 h-8 rounded-full border-2 border-gray-300 bg-yellow-400"></button>
+                        <button class="w-8 h-8 rounded-full border-2 border-gray-300 bg-blue-300"></button>
+                        <button class="w-8 h-8 rounded-full border-2 border-gray-300 bg-black"></button>
+                    </div>
+                    <div class="flex items-center gap-4 text-sm">
+                        <span class="text-gray-500">$198</span>
+                        <span class="font-medium">$178</span>
+                    </div>
+                </div>
+
+                <!-- Product Title -->
+                <div>
+                    <h1 class="text-3xl mb-3">Brushed cashmere short-sleeve cardigan</h1>
+
+                    <!-- Rating -->
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="flex items-center">
+                            <span class="text-lg font-medium">4.6</span>
+                            <div class="flex ml-2">
+                                <span class="star-filled">★</span>
+                                <span class="star-filled">★</span>
+                                <span class="star-filled">★</span>
+                                <span class="star-filled">★</span>
+                                <span class="star-filled">★</span>
+                            </div>
+                        </div>
+                        <a href="#" class="text-sm underline ml-2">Read summary of 41 reviews</a>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="text-base text-gray-700 leading-7 tracking-wide">
+                        This lightweight style comes in a subtly relaxed fit, with a slightly shorter length that hits right above the hips and an allover animal print that pops. While it's ideal for layering, it looks just as good buttoned up on its own.
+                    </p>
+                </div>
+
+                <!-- Size Selector -->
+                <div>
+                    <select class="w-full border border-gray-300 px-4 py-3 rounded text-base">
+                        <option>Select a Size</option>
+                        <option>XS</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                </div>
+
+                <!-- Add to Bag Button -->
+                <button class="w-full bg-black text-white py-4 px-6 rounded font-medium text-base hover:bg-gray-800 transition">
+                    ADD TO BAG
+                </button>
+
+                <!-- Accordion Sections -->
+                <div class="border-t border-gray-200 pt-6 space-y-0">
+                    <!-- Product Details -->
+                    <details class="border-b border-gray-200 py-4">
+                        <summary class="flex items-center justify-between cursor-pointer text-base font-medium">
+                            <span>Product Details</span>
+                            <span class="text-2xl">+</span>
+                        </summary>
+                        <div class="mt-4 text-sm text-gray-600">
+                            Product details content here...
+                        </div>
+                    </details>
+
+                    <!-- Size & Fit -->
+                    <details class="border-b border-gray-200 py-4">
+                        <summary class="flex items-center justify-between cursor-pointer text-base font-medium">
+                            <span>Size & Fit</span>
+                            <span class="text-2xl">+</span>
+                        </summary>
+                        <div class="mt-4 text-sm text-gray-600">
+                            Size and fit information here...
+                        </div>
+                    </details>
+
+                    <!-- Returns & Exchanges -->
+                    <details class="border-b border-gray-200 py-4">
+                        <summary class="flex items-center justify-between cursor-pointer text-base font-medium">
+                            <span>Returns & Exchanges</span>
+                            <span class="text-2xl">+</span>
+                        </summary>
+                        <div class="mt-4 text-sm text-gray-600">
+                            Returns policy here...
+                        </div>
+                    </details>
+
+                    <!-- Find in Store -->
+                    <details class="border-b border-gray-200 py-4">
+                        <summary class="flex items-center justify-between cursor-pointer text-base font-medium">
+                            <span>Find in Store</span>
+                            <span class="text-2xl">+</span>
+                        </summary>
+                        <div class="mt-4 text-sm text-gray-600">
+                            Store finder here...
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
