@@ -1,0 +1,38 @@
+[
+  {
+    "id": "120:13154",
+    "name": "Image1",
+    "bounds": {
+      "x": 1512.0,
+      "y": 2594.0,
+      "width": 576.0,
+      "height": 720.0
+    },
+    "type": "FRAME",
+    "image_ref": "56361d6a1e641b50ed0d83713d26778d4df0be3b"
+  },
+  {
+    "id": "120:13155",
+    "name": "Image2",
+    "bounds": {
+      "x": 2088.0,
+      "y": 2594.0,
+      "width": 576.0,
+      "height": 720.0
+    },
+    "type": "FRAME",
+    "image_ref": "56361d6a1e641b50ed0d83713d26778d4df0be3b"
+  },
+  {
+    "id": "120:13156",
+    "name": "Image2",
+    "bounds": {
+      "x": 2664.0,
+      "y": 2594.0,
+      "width": 576.0,
+      "height": 720.0
+    },
+    "type": "FRAME",
+    "image_ref": "56361d6a1e641b50ed0d83713d26778d4df0be3b"
+  }
+]

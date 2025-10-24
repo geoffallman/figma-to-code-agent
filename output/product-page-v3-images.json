@@ -1,0 +1,50 @@
+{
+  "120:13154": {
+    "filename": "product-page-v3-image-1-120-13154.png",
+    "path": "output/images/product-page-v3-image-1-120-13154.png",
+    "relative_path": "../images/product-page-v3-image-1-120-13154.png",
+    "name": "Image1",
+    "bounds": {
+      "x": 1512.0,
+      "y": 2594.0,
+      "width": 576.0,
+      "height": 720.0
+    }
+  },
+  "120:13155": {
+    "filename": "product-page-v3-image-2-120-13155.png",
+    "path": "output/images/product-page-v3-image-2-120-13155.png",
+    "relative_path": "../images/product-page-v3-image-2-120-13155.png",
+    "name": "Image2",
+    "bounds": {
+      "x": 2088.0,
+      "y": 2594.0,
+      "width": 576.0,
+      "height": 720.0
+    }
+  },
+  "120:13156": {
+    "filename": "product-page-v3-image-3-120-13156.png",
+    "path": "output/images/product-page-v3-image-3-120-13156.png",
+    "relative_path": "../images/product-page-v3-image-3-120-13156.png",
+    "name": "Image2",
+    "bounds": {
+      "x": 2664.0,
+      "y": 2594.0,
+      "width": 576.0,
+      "height": 720.0
+    }
+  },
+  "127:13643": {
+    "filename": "product-page-v3-image-4-127-13643.png",
+    "path": "output/images/product-page-v3-image-4-127-13643.png",
+    "relative_path": "../images/product-page-v3-image-4-127-13643.png",
+    "name": "color/price screencap",
+    "bounds": {
+      "x": 1659.0,
+      "y": 3371.0,
+      "width": 27.0,
+      "height": 29.0
+    }
+  }
+}
