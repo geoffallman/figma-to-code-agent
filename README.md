@@ -4,7 +4,11 @@ Multi-agent AI system that automatically generates high-fidelity React code from
 
 ## Status
 
-**Phase 1: Proof of Concept** - In Progress (Day 1)
+**Phase 1: Proof of Concept** - Week 2 In Progress
+**Last Updated:** October 24, 2025
+**Progress:** 8/15 days complete (53%)
+
+**Recent Milestone:** ✅ Image asset extraction pipeline complete
 
 ## Overview
 
@@ -18,7 +22,7 @@ This project demonstrates a builder/optimizer agent pattern:
 ### Prerequisites
 - Python 3.11+
 - Node.js 18+
-- Figma MCP Server running (localhost:3845)
+- Figma API token ([Get from Figma Settings](https://www.figma.com/settings))
 - Anthropic API key
 
 ### Installation
@@ -43,7 +47,7 @@ npx playwright install
 Create a `.env` file:
 ```
 ANTHROPIC_API_KEY=your_api_key_here
-FIGMA_MCP_URL=http://localhost:3845/mcp
+FIGMA_API_TOKEN=your_figma_token_here
 ```
 
 ### Usage
