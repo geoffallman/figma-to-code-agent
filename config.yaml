@@ -1,0 +1,53 @@
+# Figma-to-Code Agent Configuration
+
+# Model configuration for different tasks
+models:
+  # Vision evaluation (runs frequently, needs to be cost-effective)
+  evaluation:
+    provider: anthropic
+    model: claude-3-5-haiku-20241022  # Fast and cheap for vision eval
+    max_tokens: 4096
+    temperature: 0.0  # Deterministic for consistent evaluations
+
+  # Code improvement (runs less frequently, needs high quality)
+  improvement:
+    provider: anthropic
+    model: claude-sonnet-4-20250514  # Best quality for code generation
+    max_tokens: 8192
+    temperature: 0.0  # Deterministic for consistent code output
+
+# Evaluation settings
+evaluation:
+  pixel_diff_weight: 0.7  # 70% weight on objective pixel comparison
+  semantic_weight: 0.3    # 30% weight on LLM vision evaluation
+  target_score: 85.0      # Target fidelity score (0-100)
+
+# Iteration settings
+iteration:
+  max_iterations: 5
+  plateau_threshold: 2  # Stop if no improvement for N iterations
+  min_improvement: 1.0  # Minimum score improvement to continue (percentage points)
+
+# Output settings
+output:
+  save_screenshots: true
+  save_evaluations: true
+  save_code_versions: true
+  verbose: true
+
+# Alternative model options (uncomment to try different providers)
+# models:
+#   evaluation:
+#     provider: openai
+#     model: gpt-4o-mini  # Cheaper OpenAI vision model
+#   improvement:
+#     provider: openai
+#     model: gpt-4o  # High quality OpenAI code generation
+
+# models:
+#   evaluation:
+#     provider: google
+#     model: gemini-1.5-flash  # Cheapest vision option
+#   improvement:
+#     provider: google
+#     model: gemini-1.5-pro  # High quality Google code generation
