@@ -1,0 +1,174 @@
+{
+  "measurements": {
+    "main_product_image": {
+      "found": true,
+      "selector": "img:first-of-type",
+      "dimensions": {
+        "width": 480,
+        "height": 600,
+        "x": 80,
+        "y": 0
+      },
+      "styles": {
+        "fontSize": "16px",
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontWeight": "400"
+      }
+    },
+    "product_title": {
+      "found": true,
+      "selector": "h1",
+      "dimensions": {
+        "width": 560,
+        "height": 36,
+        "x": 112,
+        "y": 812
+      },
+      "styles": {
+        "fontSize": "30px",
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontWeight": "300"
+      }
+    },
+    "product_description": {
+      "found": true,
+      "selector": "p:first-of-type",
+      "dimensions": {
+        "width": 560,
+        "height": 20,
+        "x": 112,
+        "y": 632
+      },
+      "styles": {
+        "fontSize": "14px",
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontWeight": "400"
+      }
+    },
+    "selection_bar": {
+      "found": false,
+      "selector": ".selection-bar, [class*=\"selection\"], [class*=\"bar\"]",
+      "error": "Element not found"
+    },
+    "left_column": {
+      "found": true,
+      "selector": ".left-column, [class*=\"left\"], .product-info",
+      "dimensions": {
+        "width": 560,
+        "height": 24,
+        "x": 768,
+        "y": 794
+      },
+      "styles": {
+        "fontSize": "16px",
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontWeight": "400"
+      }
+    }
+  },
+  "feedback": [
+    {
+      "priority": "high",
+      "category": "dimension",
+      "element": "Brushed cashmere short-sleeve cardigan",
+      "figma_id": "157:800",
+      "issue": "Height is 36px, should be 24.0px",
+      "deviation": "50.0% too tall",
+      "fix": "Set height to 24.0px"
+    },
+    {
+      "priority": "high",
+      "category": "missing_element",
+      "element": "floating-selection-bar",
+      "figma_id": "157:817",
+      "issue": "Element not found in DOM",
+      "fix": "Add container element matching Figma node 157:817"
+    },
+    {
+      "priority": "high",
+      "category": "dimension",
+      "element": "left column",
+      "figma_id": "157:798",
+      "issue": "Height is 24px, should be 224.0px",
+      "deviation": "89.3% too short",
+      "fix": "Set height to 224.0px"
+    },
+    {
+      "priority": "high",
+      "category": "dimension",
+      "element": "romance copy",
+      "figma_id": "157:814",
+      "issue": "Height is 20px, should be 108.0px",
+      "deviation": "81.5% too short",
+      "fix": "Set height to 108.0px"
+    },
+    {
+      "priority": "medium",
+      "category": "dimension",
+      "element": "Brushed cashmere short-sleeve cardigan",
+      "figma_id": "157:800",
+      "issue": "Width is 560px, should be 500.0px",
+      "deviation": "12.0% too wide",
+      "fix": "Set width to 500.0px"
+    },
+    {
+      "priority": "medium",
+      "category": "typography",
+      "element": "Brushed cashmere short-sleeve cardigan",
+      "figma_id": "157:800",
+      "issue": "Font size is 30.0px, should be 24.0px",
+      "deviation": "25.0% too large",
+      "fix": "Set font-size to 24.0px"
+    },
+    {
+      "priority": "medium",
+      "category": "dimension",
+      "element": "Image1",
+      "figma_id": "157:745",
+      "issue": "Width is 480px, should be 576.0px",
+      "deviation": "16.7% too narrow",
+      "fix": "Set width to 576.0px"
+    },
+    {
+      "priority": "medium",
+      "category": "dimension",
+      "element": "Image1",
+      "figma_id": "157:745",
+      "issue": "Height is 600px, should be 720.0px",
+      "deviation": "16.7% too short",
+      "fix": "Set height to 720.0px"
+    },
+    {
+      "priority": "medium",
+      "category": "dimension",
+      "element": "left column",
+      "figma_id": "157:798",
+      "issue": "Width is 560px, should be 500.0px",
+      "deviation": "12.0% too wide",
+      "fix": "Set width to 500.0px"
+    },
+    {
+      "priority": "medium",
+      "category": "dimension",
+      "element": "romance copy",
+      "figma_id": "157:814",
+      "issue": "Width is 560px, should be 500.0px",
+      "deviation": "12.0% too wide",
+      "fix": "Set width to 500.0px"
+    },
+    {
+      "priority": "medium",
+      "category": "typography",
+      "element": "romance copy",
+      "figma_id": "157:814",
+      "issue": "Font size is 14.0px, should be 18.0px",
+      "deviation": "22.2% too small",
+      "fix": "Set font-size to 18.0px"
+    }
+  ],
+  "accuracy_score": 66.0,
+  "total_issues": 11,
+  "high_priority": 4,
+  "medium_priority": 7,
+  "low_priority": 0
+}
